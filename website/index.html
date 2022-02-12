@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="style.css" rel="stylesheet" />
+    
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"
+    ></script>
+    <script defer src="app.js"></script>
+    <title>Weather  Journal App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="icon-container">
+          <image src=" http://openweathermap.org/img/wn/02d@2x.png" id="icon" width="100" height="100"/>
+        </div>
+      </div>
+      <div class="content">
+        <div class="general-information">
+          <div id="zip-update" class="status" data-status>Enter A Location</div>
+          <div id="weather" class="location" data-location>To Find The Weather</div>
+        </div>
+        
+          <div class="detail  ">
+            <div class="title">Temperature</div>
+            <div id="temperature" class="value" data-temperature>TBD</div>
+          </div>
+          
+        </div>
+        <div class="city-search-container">
+          <input
+            id="zip"
+            type="text"
+            class="city-search"
+            data-city-search
+            placeholder="Enter Location"
+          />
+        </div>
+        <div class="feelings-container">
+          <input
+          id="feelings"
+            type="text"
+            class="feelings"
+            data-feelings
+            placeholder="Enter feelings"
+          />
+          <button  class="btn-grad" id="generate">Submit</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
