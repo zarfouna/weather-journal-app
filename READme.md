@@ -11,6 +11,9 @@ You can write your feelings if you want [optional].
 The application will show you:
 
 the name of the city.
+
 the temperature.
+
 the date.
+
 description of weather.
