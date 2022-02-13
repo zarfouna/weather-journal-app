@@ -111,7 +111,12 @@ body {
 .city-search-container {
   margin-bottom: 20px;
 }
-
+#date,
+#content {
+  font-size: 1.8rem;
+  color: #25404e;
+  margin-top: 10px;
+}
 #generate {
   margin-bottom: 60px;
   margin-left: 30px;

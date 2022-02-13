@@ -6,12 +6,14 @@ const feelings=document.getElementById('feelings')
 const icon=document.getElementById('icon')
 const city=document.getElementById('zip-update')
 const weather=document.getElementById('weather')
-const temperature=document.getElementById('temperature')
+const temperature=document.getElementById('temp')
+const userDate=document.getElementById('date')
+const content=document.getElementById('content')
 
 const perform=()=>{
      getData(weatherBaseURL+zip.value+apiKey).then(data=>{
          const newData={}
-         newData['data']= newDate()
+         newData['date']= newDate()
          newData['temperature']=data.main.temp
          newData['feelings']=feelings.value
          newData['city']=data.name
@@ -57,9 +59,14 @@ const updateUI=(data)=>{
      /*  location.value= 
   weather.value=  */
   console.log(data)
-  temperature.innerHTML= data.temperature
+  temp.innerHTML= data.temperature+'&degC'
   weather.innerHTML=data.weather
   city.innerHTML=data.city
+  userDate.innerHTML=data.date
+  content.innerHTML=data.feelings
+  zip.value=''
+  feelings.value=''
+
   icon.src= `http://openweathermap.org/img/wn/${data.icon}@2x.png`
 
 }
